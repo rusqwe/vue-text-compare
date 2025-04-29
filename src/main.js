@@ -26,25 +26,6 @@ router.beforeEach(
             if (meta)
                 meta.setAttribute('content', to.meta.description);
         }
-
-        /*  if (to.matched.some(record => record.meta.requiresAuth)) {
-              // console.log(to)
-              if (!store.getters.authenticated) {
-                  //console.log('мы не авторизированы')
-                  let query = to.fullPath.match(/^\/$/) ? {} : { redirect: to.fullPath }
-                  next({
-                      path: '/login',
-                      query: query
-                  })
-                  return
-              } else {
-
-                  if (to.params.id)
-                      document.title = to.meta.title + ' №' + to.params.id
-                  else
-                      document.title = to.meta.title
-              }
-          }*/
         next()
     }
 )
@@ -55,5 +36,4 @@ app.component('Textarea', Textarea);
 app.component('Button', Button);
 app.component('Checkbox', Checkbox);
 app.component('Editor', Editor);
-//app.component('CdisoftLibrary', CdisoftLibrary);
 app.mount('#app')

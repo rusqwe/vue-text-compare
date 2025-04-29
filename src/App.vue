@@ -4,12 +4,10 @@
     <router-link to="/prefix">Добавление префиксов</router-link> |
     <router-link to="/speller">Проверка орфографии онлайн</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
-
-
 #nav {
   padding: 5px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,10 +19,10 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: rgb(52, 104, 160);
 }
 
 #nav a.router-link-exact-active {
-  color: rgb(52, 104, 160);
+  color: #2c3e50;
 }
 </style>

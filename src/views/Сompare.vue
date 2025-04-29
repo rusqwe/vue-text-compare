@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="ml-4 mt-1">
-      <Button label=" Очистить" class="pi pi-replay p-button-sm" @click="clear" />
+      <Button label=" Очистить" class="pi pi-trash p-button-sm"  @click="clear" />
       <Button
         label=" Поменять местами"
         class="pi pi-sort-alt ml-2 mr-6 p-button-sm"
