@@ -1,4 +1,4 @@
-# web.strings
+# web.compare
 
 ## Project setup
 ```

@@ -4,7 +4,7 @@ module.exports = {
       registry: undefined,
       renderRoutes: [
         '/',
-        '/perfix',
+        '/prefix',
         '/speller'
       ],
       useRenderEvent: false,

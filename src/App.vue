@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/">Сравнение текстов онлайн</router-link> |
-    <router-link to="/perfix">Добавление перфиксов</router-link> |
+    <router-link to="/prefix">Добавление префиксов</router-link> |
     <router-link to="/speller">Проверка орфографии онлайн</router-link>
   </div>
   <router-view/>

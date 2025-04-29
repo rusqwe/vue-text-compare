@@ -22,7 +22,7 @@ router.beforeEach(
         window.scrollTo(0, 0);
         document.title = to.meta.title
         if (to.meta.description) {
-            let meta = document.head.querySelector('meta[name="description"]');
+            const meta = document.head.querySelector('meta[name="description"]');
             if (meta)
                 meta.setAttribute('content', to.meta.description);
         }

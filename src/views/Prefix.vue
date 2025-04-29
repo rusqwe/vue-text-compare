@@ -1,8 +1,8 @@
 <template>
   <form @submit.prevent="submitHundler">
-   <h2 class = "mb-2 mt-2" style="text-align: center">Добавление перфиксов к каждой строке онлайн</h2>
+   <h2 class = "mb-2 mt-2" style="text-align: center">Добавление префиксов к каждой строке онлайн</h2>
     <h3 style="text-align: center" class = "mb-2 mt-2">
-     Инструмент для добавления слова или символа в начало (перфикс) или конец (постфикс) каждой строки списка
+     Инструмент для добавления слова или символа в начало (префикс) или конец (суффикс) каждой строки списка
     </h3> 
     <div class="formgrid grid mt-3">
       <span class="col-6 p-float-label ml-5">
@@ -11,16 +11,16 @@
       </span>
       <div class="col-2">
         <span class="p-float-label mb-4">
-          <InputText id="perfix" class="w-full"  required="true" v-model="text2"  />
-          <label for="perfix">Введите перфикс</label>
+          <InputText id="prefix" class="w-full"  required="true" v-model="text2"  />
+          <label for="prefix">Введите префикс</label>
         </span>
         <div class="mb-2">
-          <Checkbox v-model="perfix" :binary="true" />
-          <label class="ml-1">Перфикс</label>
+          <Checkbox v-model="prefix" :binary="true" />
+          <label class="ml-1">Префикс</label>
         </div>
         <div>
           <Checkbox v-model="postfix" :binary="true" />
-          <label class="ml-1">Постфикс</label>
+          <label class="ml-1">Суффикс</label>
         </div>
         
         <!--<Button label=" Добавить" class="pi pi-plus mt-4" type="submit" />
@@ -43,7 +43,7 @@
     <div class="formgrid grid mt-4">
       <span class="col-6 p-float-label ml-5">
         <Textarea id="text2"  rows="16"  v-model="answer" class="w-full" />
-        <label for="text2" class="ml-2">Результат</label>
+        <label for="text2" class="ml-2">Результат:</label>
       </span>
     </div>
   </form>
@@ -61,7 +61,7 @@ export default {
       answer: null,
       arrayLenght: null,
       postfix: false,
-      perfix: true,
+      prefix: true,
     };
   },
   methods: {
@@ -71,7 +71,7 @@ export default {
       this.arrayLenght = array.length;
       for (let i= 0; i < array.length; i++) {
        
-        if (this.perfix) 
+        if (this.prefix) 
           array[i] = elem +' '+  array[i];
         if (this.postfix) 
           array[i] =  array[i]  +' '+ elem;    
